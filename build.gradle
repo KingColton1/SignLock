@@ -1,0 +1,27 @@
+buildscript {
+	repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io/' }
+    }
+    dependencies {
+        classpath('com.fox2code.FoxLoader:dev:1.2.32')
+    }
+}
+
+apply plugin: 'foxloader.dev'
+
+version '1.0.0'
+
+foxloader {
+    // forceReload = true
+    modId = "signlock"
+    modName = "SignLock"
+    modVersion = project.version
+    modDesc = "Lock your stuff"
+    // clientMod = "com.fox2code.signlock.SignLockClient"
+    serverMod = "com.kingcolton1.signlock.SignLockServer"
+    // Development tools don't like that both client and server define
+    // the same classes, so uncomment to disable the side inclusion.
+    includeClient = false
+    // includeServer = false
+}
