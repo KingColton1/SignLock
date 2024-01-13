@@ -7,6 +7,6 @@ public class SignLock extends Mod {
 
     @Override
     public void onPreInit() {
-        System.out.println("SignLock initializing...");
+        System.out.println(loggingPrefix + "initializing...");
     }
 }
