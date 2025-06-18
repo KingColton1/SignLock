@@ -1,13 +1,10 @@
-package com.kingcolton1.signlock.server.mixins;
+package com.kingcolton1.signlock.mixins;
 
-import net.minecraft.src.game.entity.EntityLiving;
-import net.minecraft.src.game.entity.player.EntityPlayer;
-import net.minecraft.src.game.level.World;
+import net.minecraft.common.entity.EntityLiving;
+import net.minecraft.common.entity.player.EntityPlayer;
+import net.minecraft.common.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(value = EntityPlayer.class, remap = false)
 public abstract class EntityPlayerMixins extends EntityLiving {
